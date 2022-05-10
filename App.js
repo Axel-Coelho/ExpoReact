@@ -10,6 +10,8 @@ import { Screen } from './src/components/Screen'
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//Snake game
+import SnakeApp from './src/snakegame/screens/SnakeGame';
 
 function HomeScreen({ navigation }) {
   return (
@@ -35,6 +37,7 @@ function SnakeGame({ navigation }) {
         title="Go to Home"
         onPress={() => navigation.navigate('Home')}
       />
+
     </View>
   );
 }
