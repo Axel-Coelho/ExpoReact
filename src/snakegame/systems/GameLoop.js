@@ -1,10 +1,28 @@
 import React, { Component } from "react";
-import Constants from '../constants/constants';
+import { Constants } from '../constants/constants';
 
 const GameLoop = (entities, { touches, dispatch, events }) => {
     let head = entities.head;
     let food = entities.food;
     let tail = entities.tail;
+
+    if (events.length) {
+        for (let i = 0; i < events.length; i++) {
+            if (events[i].type === "move-down" && head.yspeed != -1) {
+                head.yspeed = 1;
+                head.xspeed = 0;
+            } else if (events[i].type === "move-up" && head.yspeed != 1) {
+                head.yspeed = -1;
+                head.xspeed = 0;
+            } else if (events[i].type === "move-left" && head.xspeed != 1) {
+                head.yspeed = 0;
+                head.xspeed = -1;
+            } else if (events[i].type === "move-right" && head.xspeed != -1) {
+                head.yspeed = 0;
+                head.xspeed = 1;
+            }
+        }
+    }
 
     head.nextMove -= 1;
     if (head.nextMove === 0) {
