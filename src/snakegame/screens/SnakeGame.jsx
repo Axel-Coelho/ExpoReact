@@ -5,7 +5,7 @@ import { Head } from "../components/Head";
 import { Food } from "../components/Food";
 import { Tail } from "../components/Tail";
 import { GameLoop } from "../systems/GameLoop";
-import Constants from '../constants/constants';
+import { Constants } from '../constants/constants';
 
 export default class SnakeApp extends Component {
     constructor(props) {

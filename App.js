@@ -11,7 +11,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //Snake game
-import SnakeApp from './src/snakegame/screens/SnakeGame';
+import Snake from './src/snakegame/screens/SnakeGame';
 
 function HomeScreen({ navigation }) {
   return (
@@ -61,7 +61,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Snake" component={SnakeGame} />
+        <Stack.Screen name="Snake" component={Snake} />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>

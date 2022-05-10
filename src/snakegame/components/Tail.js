@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
-import Constants from '../constants/constants';
+import { Constants } from '../constants/constants';
 
 class Tail extends Component {
     constructor(props) {
