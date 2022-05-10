@@ -14,19 +14,23 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>HomeScreen</Text>
+      <Text>HomeScreen</Text><br />
       <Button
-        title="Go to Details"
+        title="Play Snake !"
+        onPress={() => navigation.navigate('Snake')}
+      /><br />
+      <Button
+        title="Details"
         onPress={() => navigation.navigate('Details')}
       />
     </View>
   );
 }
 
-function DetailsScreen({ navigation }) {
+function SnakeGame({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
+      <Text> The Snake ! </Text><br />
       <Button
         title="Go to Home"
         onPress={() => navigation.navigate('Home')}
@@ -35,8 +39,16 @@ function DetailsScreen({ navigation }) {
   );
 }
 
-function PetitJeu() {
-
+function DetailsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text><br />
+      <Button
+        title="Go to Home"
+        onPress={() => navigation.navigate('Home')}
+      />
+    </View>
+  );
 }
 
 const Stack = createNativeStackNavigator();
@@ -46,6 +58,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Snake" component={SnakeGame} />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
