@@ -10,15 +10,11 @@ import { Screen } from './src/components/Screen'
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//Expo Battery
-import * as Battery from 'expo-battery';
-import BatteryLevel from './src/components/BatteryLevel';
 
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>HomeScreen</Text>
-      {/* <BatteryLevel /> */}
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
