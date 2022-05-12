@@ -16,11 +16,11 @@ import Snake from './src/snakegame/screens/SnakeGame';
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>HomeScreen</Text><br />
+      <Text>HomeScreen</Text>
       <Button
         title="Play Snake !"
         onPress={() => navigation.navigate('Snake')}
-      /><br />
+      />
       <Button
         title="Details"
         onPress={() => navigation.navigate('Details')}
@@ -32,7 +32,7 @@ function HomeScreen({ navigation }) {
 function SnakeGame({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text> The Snake ! </Text><br />
+      <Text> The Snake ! </Text>
       <Button
         title="Go to Home"
         onPress={() => navigation.navigate('Home')}
@@ -45,7 +45,7 @@ function SnakeGame({ navigation }) {
 function DetailsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text><br />
+      <Text>Details Screen</Text>
       <Button
         title="Go to Home"
         onPress={() => navigation.navigate('Home')}

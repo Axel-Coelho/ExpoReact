@@ -55,7 +55,6 @@ export default class SnakeApp extends Component {
                     }}
                     running={this.state.running}
                     onEvent={this.onEvent}>
-
                     <StatusBar hidden={true} />
 
                 </GameEngine>
